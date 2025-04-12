@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: var(--bg);
+  color: var(--text);
+  transition: 0.3s;
+}
+:root {
+  --bg: #ffffff;
+  --text: #000000;
+  --primary: #6a0dad;
+}
+.dark-mode {
+  --bg: #121212;
+  --text: #f1f1f1;
+}
+header {
+  background: var(--primary);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  list-style: none;
+  margin-top: 1rem;
+}
+nav a, #themeToggle {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+section {
+  padding: 2rem;
+}
+.profile-pic {
+  width: 150px;
+  border-radius: 10px;
+  margin-top: 1rem;
+}
+ul {
+  padding-left: 1rem;
+}
+ul li {
+  margin: 0.5rem 0;
+}
+.blog-card {
+  background: #f4f4f4;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+.dark-mode .blog-card {
+  background: #1e1e1e;
+}
+form {
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+input, textarea {
+  padding: 0.7rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+button {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 0.7rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: var(--primary);
+  color: white;
+  margin-top: 2rem;
+}
+
+        
+  
+
+    
