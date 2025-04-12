@@ -1,133 +1,75 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Octavier Muthee | Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carleen Edeard | Personal Website</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        
-        
-        
-        <button id="toggle-theme">Dark Mode</button>
-    </header>
-    
+  <header>
+    <h1>Carleen Edeard</h1>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><button id="themeToggle">Toggle Theme</button></li>
+      </ul>
+    </nav>
+  </header>
 
-    
-    <main>
-        <section id="home"   class="section active"> 
-            <p id="greeting"></p>
-            <h1 class="animated-title">Where Function Meets Aesthetics: Bringing Ideas to Life!</h1>
-           
+  <section id="home">
+    <h2 id="greeting">Welcome!</h2>
+    <p>Hi! I'm Carleen Edeard. Welcome to my personal space on the web.</p>
+    <img src="profile picture.jpg" alt="Carleen Edeard" class="profile-pic">
+  </section>
 
-            <p>Your ideas deserve more than just a website, they deserve an experience! I love blending creativity and technology to create digital spaces that feel intuitive, engaging, and uniquely yours. Let’s build something fun together!</p>
-            
-            <a href="#projects" class="cta">Check My Work</a>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I am a passionate and creative developer with a focus on front-end technologies. I enjoy building interactive, user-friendly websites.</p>
+  </section>
 
+  <section id="projects">
+    <h2>Projects Portfolio</h2>
+    <ul>
+      <li><a href="https://carl2001-bot.github.io/Library-System-Management/" target="_blank">Library Management System</a></li>
+      <li><a href="https://carl2001-bot.github.io/-js-regex-validation_CARLEEN-NYAMANGA/" target="_blank">JS Regex Validation Form</a></li>
+      <li><a href="https://carl2001-bot.github.io/PREMIUM-LEAGUE-HUB/" target="_blank">Premium League Table</a></li>
+    </ul>
+  </section>
 
-        </section>
-        
-        
-        <section id="projects"  class="section">
-            <h2>My Projects :  Bringing Ideas to Life</h2>
-            <p>Here are some of the projects I've worked on using *HTML, CSS, and JavaScript*. Each one represents a step forward in my learning journey!</p>
+  <section id="blog">
+    <h2>Blog</h2>
+    <div class="blog-card">
+      <h3>AI Waste Sorting</h3>
+      <p>AI waste sorting uses machine learning to classify recyclables efficiently. By training algorithms with labeled images, systems can detect plastic, paper, glass, and metal in real-time, reducing human error and increasing recycling rates.</p>
+    </div>
+    <div class="blog-card">
+      <h3>Digital Divide Solution</h3>
+      <p>Bridging the digital divide involves providing affordable internet, digital literacy training, and accessible devices. Community-driven tech hubs and government policies can help ensure no one is left behind in the digital era.</p>
+    </div>
+  </section>
 
-            <div class="projects-container">
-                <div class="project">
-                   
-                    <h3>travel website</h3>
-                    <p>A responsive wesite that allows users to choose various detinations and to book with prices iclusiv. Very user friendly and he aesthetics match.</p>
-                    <a href="https://octavier22.github.io/Travel-website/" target="_blank">View on GitHub</a>
-                </div>
-        
-                <div class="project">
-                    
-                    <h3>Libaray management system</h3>
-                    <p>A library management system that allow user to borrow ooks and facilitates addition of a new book.</p>
-                    <a href="https://octavier22.github.io/library-management-system/" target="_blank">View on GitHub</a>
-                </div>
-        
-                <div class="project">
-                 
-                    <h3>Recipe website</h3>
-                    <p>A responsive webite with various recipes and deliccies.</p>
-                    <a href="https://octavier22.github.io/Recipe-web/" target="_blank">View on GitHub</a>
-                </div>
-                <div class="project">
-    
-                    <h3>Water park website website</h3>
-                    <p>Showcases different parks within shavoshire coucil illed with adventure. Allows booking.</p>
-                    <a href="https://octavier22.github.io/Recipe-web/" target="_blank">View on GitHub</a>
-                </div>
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form id="contactForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" required>
+      <label for="email">Email:</label>
+      <input type="email" id="email" required>
+      <label for="message">Message:</label>
+      <textarea id="message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
 
-            </div>
-        </section>
-        
-        
+  <footer>
+    <p>&copy; 2025 Carleen Edeard</p>
+  </footer>
 
-        <section id="about"  class="section">
-            <h2>About Me :  More Than Just Code</h2>
-            <p><em>"Behind every great website is a curious mind that loves solving problems."</em></p>
-        
-            <p>Hey there! I'm <strong>Octavier Muthee</strong>, an <strong>Information Systems student at USIU</strong> with a passion for crafting digital experiences that are both functional and visually stunning. My journey into tech started in 2023, and it's been an exciting learning experience ever since!</p>
-        
-            <h3> My Journey</h3>
-            <ul>
-                <li> 2023(The Beginning): Started learning HTML, CSS, and JavaScript. Built my first static web pages and experimented with styling.</li>
-                <li> 2024:  Interactive Web Design: Dove deeper into JavaScript, learning how to add interactivity with DOM manipulation and event listeners. Created a portfolio and small web projects.</li>
-                <li> 2025: Full-Fledged Web Development: Building responsive website, implementing animations and dynamic content using JavaScript. Exploring JavaScript. </li>
-            </ul>
-        
-            <h3>Beyond Code / Fun Facts About Me</h3>
-            <ul>
-                <li> Creativity :I see coding as a mix of logic and art.</li>
-                <li> Bookworm Mode: Always reading about psychology, tech trends, or sci-fi.</li>
-                <li>Coffee or Code? Why not both? Best ideas come with caffeine!</li>
-                <li>Casual Gamer: I unwind with strategy and open-world games.</li>
-            </ul>
-        
-            <p><strong> Let’s Build Something Awesome Together!</strong></p>
-            <img src="profile picture.jpg"" alt="octavier muthee">
-        </section>
-        
-
-        <section id="blog" class="section">
-            <h2>Blog</h2>
-            <p>Optimizing Websites for Faster Load Times. Offer practical advice on how to design websites that load quickly, from image optimization to choosing the right hosting.</p>
-            <input type="text" id="search" placeholder="Search blog posts...">
-            <div id="blog-list"></div>
-        </section>
-        
-
-        <section id="contact" class="section">
-            <h2>Contact Me</h2>
-            <form id="contact-form">
-                <input type="text" id="name" placeholder="Your Name" required>
-                <input type="email" id="email" placeholder="Your Email" required>
-                <textarea id="message" placeholder="Your Message" required></textarea>
-                <button type="submit">Send</button>
-            </form>
-        </section>
-        
-    </main>
-
-    <footer>
-        <p>&copy; 2025 Octavier Muthee</p>
-    </footer>
+  <script src="script.js"></script>
 </body>
-
 </html>
