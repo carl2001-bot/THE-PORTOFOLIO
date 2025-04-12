@@ -1,43 +1,78 @@
-// Dynamic greeting based on time of day
-const greeting = document.getElementById("greeting");
-const hour = new Date().getHours();
-if (hour < 12) {
-  greeting.textContent = "Good Morning 🌞";
-} else if (hour < 18) {
-  greeting.textContent = "Good Afternoon ☀️";
-} else {
-  greeting.textContent = "Good Evening 🌙";
-}
+document.addEventListener("DOMContentLoaded", function () {
 
-// Theme toggle
-document.getElementById('themeToggle').addEventListener('click', () => {
-  document.body.classList.toggle('dark-mode');
-  localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+    // Dynamic Greeting Based on Time of Day
+    const greetingElement = document.getElementById("greeting");
+    const now = new Date();
+    const hour = now.getHours();
+    let greeting = "Hello";
+
+    if (hour < 12) {
+        greeting = "Good morning";
+    } else if (hour < 18) {
+        greeting = "Good afternoon";
+    } else {
+        greeting = "Good evening";
+    }
+
+    if (greetingElement) {
+        greetingElement.textContent = greeting;
+    }
+
+    // 🌓 Dark Mode Toggle
+    const toggleThemeButton = document.getElementById("toggle-theme");
+    toggleThemeButton.addEventListener("click", function () {
+        document.body.classList.toggle("dark-mode");
+        toggleThemeButton.textContent = document.body.classList.contains("dark-mode") ? "Light Mode" : "Dark Mode";
+    });
+
+    // Navigation and Smooth Section Switching
+    const navLinks = document.querySelectorAll("nav a[data-target]");
+    const sections = document.querySelectorAll(".section");
+
+    function showSection(targetId) {
+        sections.forEach(section => section.classList.remove("active"));
+        const targetSection = document.getElementById(targetId);
+        if (targetSection) {
+            targetSection.classList.add("active");
+        }
+    }
+
+    navLinks.forEach(link => {
+        link.addEventListener("click", function (event) {
+            event.preventDefault();
+            const targetId = link.getAttribute("data-target");
+            showSection(targetId);
+            history.pushState(null, "", #${targetId});
+        });
+    });
+
+    // ⏪ Handle browser back/forward navigation
+    window.addEventListener("popstate", function () {
+        const targetId = location.hash.substring(1) || "home";
+        showSection(targetId);
+    });
+
+    // Show home by default on page load
+    const initialSection = location.hash.substring(1) || "home";
+    showSection(initialSection);
 });
 
-// Load saved theme preference
-if (localStorage.getItem('theme') === 'dark') {
-  document.body.classList.add('dark-mode');
+// Show/hide sections manually based on hash
+function showSection(sectionId) {
+    const sections = document.querySelectorAll("section");
+    sections.forEach(section => {
+        section.style.display = section.id === sectionId ? "block" : "none";
+    });
 }
 
-// Form validation
-document.getElementById('contactForm').addEventListener('submit', function (e) {
-  const name = document.getElementById('name').value.trim();
-  const email = document.getElementById('email').value.trim();
-  const message = document.getElementById('message').value.trim();
+// Hide home when viewing blog/contact
+window.addEventListener("hashchange", function () {
+    const hash = window.location.hash;
+    const homeSection = document.getElementById("home");
 
-  if (!name || !email.includes('@') || !message) {
-    alert('Please fill all fields correctly.');
-    e.preventDefault();
-  } else {
-    alert('Message sent successfully!');
-  }
+    if (hash === "#blog" || hash === "#contact") {
+        homeSection.style.display = "none";
+    } else {
+        homeSection.style.display = "block";
+    }
 });
-
-
-
-
-
-   
-   
-  
