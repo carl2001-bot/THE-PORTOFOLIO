@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -9,90 +9,121 @@
 <body>
   <header>
     <h1>Carleen Edward</h1>
+    <span id="greeting">Welcome!</span>
     <nav>
       <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#blog">Blog</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><button id="themeToggle">Toggle Theme</button></li>
+        <li><a href="#home" data-target="home">Home</a></li>
+        <li><a href="#about" data-target="about">About Me</a></li>
+        <li><a href="#projects" data-target="projects">Projects</a></li>
+        <li><a href="#blog" data-target="blog">Blog</a></li>
+        <li><a href="#contact" data-target="contact">Contact</a></li>
+        <li><button id="toggle-theme">Dark Mode</button></li>
       </ul>
     </nav>
   </header>
 
-  <section id="home">
-    <h2 id="greeting">Welcome!</h2>
-    <p>Hi! I'm Carleen Edward. Welcome to my personal space on the web.</p>
-    <img src=""C:\Users\Admin\OneDrive\Desktop\profile picture.jpg"" alt="Carleen Edward" class="profile-pic">
-  </section>
+  <main>
+    <section id="home" class="section active">
+      <h2>Welcome to My Portfolio</h2>
+      <p>Hi! I'm Carleen Edward. Welcome to my personal space on the web.</p>
+      <img src="images/profile.jpg" alt="Carleen Edward" class="profile-pic">
+      <a href="#about" class="cta">Learn More About Me</a>
+    </section>
 
-  <section id="about"class="section">
-   
-    <h2>About Me</h2>
-    <p> <em> "In the world on many everyone choose there own battle to win , as for me solving problems via tech is my battle". </em></p>
-   <p>hey there! i'm <strong> Carleen Edward</strong>
-   <strong> An information system student at USIU</strong> with a passion to create  digital xperiences that are both functional and visually epic. 
-    My dream into tech started in 2023 and it has been going on ever since with expectation of thriving !
-    <h3>My Journey</h3>
-    <ul> 
-     <li>2023(NEW ERA); started learning HTML,CSS and javascript in class and managed to build my first webpage</li>
-     <li>2024;Improvement begun started designing, then got deeper in javascript and learnt thing like DOM and the created small projects and portfolio.</li>
-    </ul>
-   <h3>beyond code/fun facts about me</h3>
-   <ul>
-    <li> Creativity: I love creating and art and it is through coding i grt to mix the art of code and logic
-    </li>
-    <li>Bookworm: i have alwqys loved to get lost in the world of reading and knowlwdge. </li>
-   </ul>
-   <P><strong> Let's explore tech together!</P></strong>
-   
-  </p>
-  </section>
+    <section id="about" class="section">
+      <h2>About Me</h2>
+      <p><em>"In the world of many, everyone chooses their own battle to win. As for me, solving problems via tech is my battle."</em></p>
+      <p>Hey there! I'm <strong>Carleen Edward</strong>, an Information Systems student at USIU with a passion to create digital experiences that are both functional and visually epic. My journey into tech started in 2023 and it has been going on ever since with expectations of thriving!</p>
+      
+      <h3>My Journey</h3>
+      <ul> 
+        <li>2023 (NEW ERA): Started learning HTML, CSS and JavaScript in class and managed to build my first webpage</li>
+        <li>2024: Improvement began, started designing, then got deeper into JavaScript and learned things like DOM and created small projects and portfolio.</li>
+      </ul>
+      
+      <h3>Beyond Code/Fun Facts About Me</h3>
+      <ul>
+        <li>Creativity: I love creating art and it is through coding I get to mix the art of code and logic</li>
+        <li>Bookworm: I have always loved to get lost in the world of reading and knowledge.</li>
+      </ul>
+      <p><strong>Let's explore tech together!</strong></p>
+    </section>
 
-  <section id="projects" class="section">
-    <h2>My projects</h2>
-   <p> These are some of the projects that I have  worked on using  HTML, CSS and Javascript have</p>
-   <div class= "project container">
-    <div class="project">
-     <img src="C:\Users\Admin\OneDrive\Pictures\library mgt.png" alt="library management system screenshoot">
-   <h3>  A library management system</h3>
-     <p>this is library management system that allows users to borrow books and facilitate addition of new book</p>
-     <a href="https://carl2001-bot.github.io/Library-System-Management/" target="_blank"> view on Github</a></div>
+    <section id="projects" class="section">
+      <h2>My Projects</h2>
+      <p>These are some of the projects that I have worked on using HTML, CSS and JavaScript.</p>
+      
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="web">Web</button>
+        <button class="filter-btn" data-filter="design">Design</button>
+      </div>
+      
+      <div class="project-container">
+        <div class="project" data-category="web">
+          <img src="images/library-mgt.png" alt="Library Management System Screenshot" class="project-img">
+          <h3>A Library Management System</h3>
+          <p>This is a library management system that allows users to borrow books and facilitates addition of new books.</p>
+          <a href="https://carl2001-bot.github.io/Library-System-Management/" target="_blank" class="cta">View on GitHub</a>
+        </div>
 
-    <div class="project">
-     <img src="C:\Users\Admin\OneDrive\Pictures 1\Screenshots\premiuml league.png" alt="premium table screenshoot">
-   <h3> A premium table </h3>
-     <p>this is a premum tbale that show the teams playing in the premium league and there results</p>
-     <a href="https://carl2001-bot.github.io/PREMIUM-LEAGUE-HUB/" target="_blank"> view on Github</a></div>
-  </section>
-    
-     </ul>
-  </section>
+        <div class="project" data-category="web">
+          <img src="images/premium-league.png" alt="Premium Table Screenshot" class="project-img">
+          <h3>A Premium League Table</h3>
+          <p>This is a premium table that shows the teams playing in the premium league and their results.</p>
+          <a href="https://carl2001-bot.github.io/PREMIUM-LEAGUE-HUB/" target="_blank" class="cta">View on GitHub</a>
+        </div>
+        
+        <div class="project" data-category="design">
+          <img src="images/design-project.jpg" alt="Design Project" class="project-img">
+          <h3>UI/UX Design Project</h3>
+          <p>A collection of my UI/UX design work showcasing my creative process.</p>
+          <a href="#" class="cta">View Details</a>
+        </div>
+      </div>
+    </section>
 
-  <section id="blog" class="section">
-    <h2>Blog</h2>
-   <p>Optimizing Websites for Faster Load Times. Offer practical advice on how to design websites that load quickly, from image optimization to choosing the right hosting.</p>
-            <input type="text" id="search" placeholder="Search blog posts...">
-            <div id="blog-list"></div>
-        </section>
+    <section id="blog" class="section">
+      <h2>Blog</h2>
+      <p>Optimizing Websites for Faster Load Times. Offer practical advice on how to design websites that load quickly, from image optimization to choosing the right hosting.</p>
+      <input type="text" id="search" placeholder="Search blog posts...">
+      <div id="blog-list" class="blog-container"></div>
+    </section>
 
-        <section id="contact" class="section">
-            <h2>Contact Me</h2>
-            <form id="contact-form">
-                <input type="text" id="name" placeholder="Your Name" required>
-                <input type="email" id="email" placeholder="Your Email" required>
-                <textarea id="message" placeholder="Your Message" required></textarea>
-                <button type="submit">Send</button>
-            </form>
-        </section>
-
+    <section id="contact" class="section">
+      <h2>Contact Me</h2>
+      <form id="contact-form">
+        <div class="form-group">
+          <input type="text" id="name" placeholder="Your Name" required>
+          <span class="error-message" id="name-error"></span>
+        </div>
+        <div class="form-group">
+          <input type="email" id="email" placeholder="Your Email" required>
+          <span class="error-message" id="email-error"></span>
+        </div>
+        <div class="form-group">
+          <textarea id="message" placeholder="Your Message" required></textarea>
+          <span class="error-message" id="message-error"></span>
+        </div>
+        <button type="submit" class="cta">Send Message</button>
+      </form>
+      <div id="form-success" class="success-message"></div>
+    </section>
+  </main>
 
   <footer>
-    <p>&copy; 2025 Carleen Edeard</p>
+    <p>&copy; 2025 Carleen Edward</p>
+    <div class="social-links">
+      <a href="#" target="_blank">LinkedIn</a>
+      <a href="https://github.com/carl2001-bot" target="_blank">GitHub</a>
+      <a href="#" target="_blank">Twitter</a>
+    </div>
   </footer>
- <script src="script.js"></script>
-
-
+  
+  <script src="script.js"></script>
 </body>
 </html>
+   
+ 
+  
+
